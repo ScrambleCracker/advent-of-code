@@ -1,8 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+const { readInput } = require('../../helpers/input-reader');
 
-let input = fs.readFileSync(path.join('/', __dirname, 'input.txt'), 'utf8');
-input = input.split('\n').map(val => parseInt(val));
+const input = readInput({
+    dir: __dirname,
+    mapper: val => parseInt(val),
+});
 
 let increaseCount = 0;
 
