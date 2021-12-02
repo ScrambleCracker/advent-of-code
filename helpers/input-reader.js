@@ -7,7 +7,14 @@ module.exports = {
     readInput,
 };
 
-function readInput({dir, file = 'input.txt', mapper = (data) => data, transformer = (input) => input.split('\n')}) {
+function readInput(
+    {
+        dir,
+        file = 'input',
+        mapper = (data) => data,
+        transformer = (input) => input.split('\n')
+    }
+) {
     const input = fs.readFileSync(path.join(dir, file), ENCODING);
 
     return transformer(input).map(mapper);
