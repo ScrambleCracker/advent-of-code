@@ -17,7 +17,7 @@ for (const [direction, units] of input) {
         }
         case 'up': {
             depth -= units;
-            break
+            break;
         }
         case 'down': {
             depth += units;
@@ -39,7 +39,7 @@ for (const [direction, units] of input) {
         }
         case 'up': {
             aim -= units;
-            break
+            break;
         }
         case 'down': {
             aim += units;
